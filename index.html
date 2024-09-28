@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script>
+		        fetch("https://ipapi.co/json/")
+		                    .then(response => response.json())
+		                    .then(data => {
+		                        document.getElementById("ip").textContent =  data.ip;
+								document.getElementById("location").textContent =  data.city + ", " + data.region + ", " + data.country;
+							});
+		    </script>
+		<style>
+			.image-text-wrapper {
+			  text-align: left;
+			  margin-left: 120px;
+			}
+			 
+			.image-text-wrapper img {
+			  float: right;
+			  margin-right: 20px;
+			}
+		</style>
 		<style>
 		  
 		  canvas {
@@ -10,25 +29,11 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="anan.jpg">
 		<title>这里是Anan~ ^O^</title>
-		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/c/font_4691523_d577x64q4xq.css">
 		<link rel="stylesheet" href="./general.css"> 
 		<link rel="stylesheet" href="./navigation.css"> 
 		<link rel="stylesheet" href="./Toggle.css"> 
 		<link rel="stylesheet" href="./Toggleup.css"> 
 		<link rel="stylesheet" href="./backgrounds.css">
-		<script>
-		function displayTime() {//time function
-		  var now = new Date();
-		  var hours = now.getHours().toString().padStart(2, '0');
-		  var minutes = now.getMinutes().toString().padStart(2, '0');
-		  var seconds = now.getSeconds().toString().padStart(2, '0');
-		  document.getElementById('time').textContent = hours + ':' + minutes + ':' + seconds;
-		}
-		window.onload = function() {
-		  // Update the time every second
-		  setInterval(displayTime, 1000);
-		};
-		</script>
 		<style>
 		.right-align {
 		  text-align: right;
@@ -88,14 +93,113 @@
 		    <div class="content">  
 		        <!-- 主页内容 -->  
 	
-		        <h1 style="line-height: 1.5; color:mediumpurple">安安的个人网站</h1>
+	<div style="display: flex; justify-content: space-between;">  
+	  <span><h1 style="line-height: 1.5; color:mediumpurple">安安的个人网站</h1></span>  
+	  <span><h2 id="time" style="color: mediumorchid"></h2></span>  
+	</div>
+		        
 				<p style="line-height: 1.5; color:aqua">------------------------------------------------------------------------------------------------------------------------</p>
 				  <br>
-				  <p style="line-height: 1.5;">欢迎宝宝访问，Welcome~</p>
-				  <h4 style="color:violet" class="right-align">现在的时间是</h4>
-				  <div id="time" style="color:blueviolet" class="right-align"></div>
+				  <p style="line-height: 1.5;">欢迎宝宝访问，Welcome~</p><br>
+				  
+				  <br><br>
+				  <div class="image-text-wrapper">
+				    <img src="picture.png" alt="安安" width="350">
+					<br>
+				    <h1 style="color: #b145e9"><font face="华文彩云">您好~ 让我来猜猜</font></h1><br>
+					<font face="华文彩云"><h2 style="color: #facdba">您的IP地址是:</h2></font>
+					<h3 id="ip" style="color: #7fb3d8"></h3><br>
+					<font face="华文彩云"><h2 style="color: #f6b9c3">您的位置是:</h2></font>
+					<h3 id="location" style="color: #7eb699"></h3><br>
+					<font face="华文彩云"><h2 style="color: #deb8df">您的经纬度:</h2></font>
+					<h3 id="ns" style="color: #fad773"></h3><br>
+					<font face="华文彩云"><h2 style="color: #002fa7">您的浏览器版本是:</h2></font>
+					<h3 id="browser-name" style="color: #e60000"></h3><br>
+				  </div>
 		    </div>  
 		</div> 
 	</body>
 </html>
-<!--首页 小工具 模板代码 关于哥哥 友情界面-->
+<script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                document.getElementById("ns").innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+ 
+        function showPosition(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            document.getElementById("ns").innerHTML = latitude + "° N , " 
+             + longitude+"° E";
+        }
+ 
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    document.getElementById("ns").innerHTML = "User denied the request for Geolocation."
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    document.getElementById("ns").innerHTML = "Location information is unavailable."
+                    break;
+                case error.TIMEOUT:
+                    document.getElementById("ns").innerHTML = "The request to get user location timed out."
+                    break;
+                case error.UNKNOWN_ERROR:
+                    document.getElementById("ns").innerHTML = "An unknown error occurred."
+                    break;
+            }
+        }
+ 
+        getLocation();
+  
+	function displayTime() {  
+	        var now = new Date();  
+	        var hours = now.getHours();  
+	        var minutes = now.getMinutes();  
+	        var seconds = now.getSeconds();  
+	        hours = hours < 10 ? '0' + hours : hours;  
+	        minutes = minutes < 10 ? '0' + minutes : minutes;  
+	        seconds = seconds < 10 ? '0' + seconds : seconds;  
+	        document.getElementById('time').innerText = hours + ':' + minutes + ':' + seconds;  
+	    }  
+	
+        function detectBrowser() {
+            var userAgent = navigator.userAgent;
+            var browserName, fullVersion;
+ 
+            if (userAgent.indexOf("Chrome") !== -1) {
+                browserName = "Google Chrome";
+                fullVersion = userAgent.substring(userAgent.indexOf("Chrome") + 7);
+            } else if (userAgent.indexOf("Firefox") !== -1) {
+                browserName = "Mozilla Firefox";
+                fullVersion = userAgent.substring(userAgent.indexOf("Firefox") + 8);
+            } else if (userAgent.indexOf("MSIE") !== -1) {
+                browserName = "Microsoft Internet Explorer";
+                fullVersion = userAgent.substring(userAgent.indexOf("MSIE") + 5);
+            } else if (userAgent.indexOf("Safari") !== -1) {
+                browserName = "Apple Safari";
+                fullVersion = userAgent.substring(userAgent.indexOf("Safari") + 7);
+                if (userAgent.indexOf("Version") !== -1) {
+                    fullVersion = userAgent.substring(userAgent.indexOf("Version") + 8);
+                }
+            } else {
+                browserName = "unknown";
+                fullVersion = "0";
+            }
+ 
+            // extracts the browser version major number
+            var version = parseInt(fullVersion, 10);
+ 
+            // output
+            document.getElementById("browser-name").textContent = browserName+" version "+version;
+        }
+ 
+         window.onload = function() {  
+                getLocation(); // 调用地理位置函数  
+                displayTime(); // 初始化时间显示  
+                setInterval(displayTime, 1000); // 每秒更新时间  
+                detectBrowser()}; // 调用浏览器检测函数  
+    </script>
