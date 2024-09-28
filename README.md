@@ -15,6 +15,8 @@ background.jpg 背景
 
 backgrounds.css 背景图层及透明框设置
 
+anan.jpg LOGO
+
 ### 小工具
 
 tools.html 静态网页
