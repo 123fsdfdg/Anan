@@ -113,8 +113,8 @@
 					<h3 id="location" style="color: #7eb699"></h3><br>
 					<font face="华文彩云"><h2 style="color: #deb8df">您的经纬度:</h2></font>
 					<h3 id="ns" style="color: #fad773"></h3><br>
-					<font face="华文彩云"><h2 style="color: #002fa7">您的浏览器版本是:</h2></font>
-					<h3 id="browser-name" style="color: #e60000"></h3><br>
+					<font face="华文彩云"><h2 style="color: #002fa7">您的操作系统是:</h2></font>
+					<h3 id="os" style="color: #e60000"></h3><br>
 				  </div>
 		    </div>  
 		</div> 
@@ -166,40 +166,34 @@
 	        document.getElementById('time').innerText = hours + ':' + minutes + ':' + seconds;  
 	    }  
 	
-        function detectBrowser() {
-            var userAgent = navigator.userAgent;
-            var browserName, fullVersion;
+       function detectOS() {
+                   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+                   
+                   if (userAgent.match(/windows/i)) {
+                       return 'Windows';
+                   }
+                   else if (userAgent.match(/mac/i)) {
+                       return 'Mac';
+                   }
+                   else if (userAgent.match(/linux/i)) {
+                       return 'Linux';
+                   }
+                   else if (userAgent.match(/iphone/i)) {
+                       return 'iOS';
+                   }
+                   else if (userAgent.match(/android/i)) {
+                       return 'Android';
+                   }
+                   else {
+                       return 'Unknown';
+                   }
+               }
  
-            if (userAgent.indexOf("Chrome") !== -1) {
-                browserName = "Google Chrome";
-                fullVersion = userAgent.substring(userAgent.indexOf("Chrome") + 7);
-            } else if (userAgent.indexOf("Firefox") !== -1) {
-                browserName = "Mozilla Firefox";
-                fullVersion = userAgent.substring(userAgent.indexOf("Firefox") + 8);
-            } else if (userAgent.indexOf("MSIE") !== -1) {
-                browserName = "Microsoft Internet Explorer";
-                fullVersion = userAgent.substring(userAgent.indexOf("MSIE") + 5);
-            } else if (userAgent.indexOf("Safari") !== -1) {
-                browserName = "Apple Safari";
-                fullVersion = userAgent.substring(userAgent.indexOf("Safari") + 7);
-                if (userAgent.indexOf("Version") !== -1) {
-                    fullVersion = userAgent.substring(userAgent.indexOf("Version") + 8);
-                }
-            } else {
-                browserName = "unknown";
-                fullVersion = "0";
-            }
- 
-            // extracts the browser version major number
-            var version = parseInt(fullVersion, 10);
- 
-            // output
-            document.getElementById("browser-name").textContent = browserName+" version "+version;
-        }
  
          window.onload = function() {  
                 getLocation(); // 调用地理位置函数  
                 displayTime(); // 初始化时间显示  
                 setInterval(displayTime, 1000); // 每秒更新时间  
-                detectBrowser()}; // 调用浏览器检测函数  
+                var OSName = detectOS();
+                            document.getElementById('os').innerHTML =  OSName;}; // 调用浏览器检测函数  
     </script>
