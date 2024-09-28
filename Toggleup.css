@@ -27,8 +27,7 @@
 	width:20px;
 	height:20px;
 	background:transparent;
-	border-bottom-right-radius:20px;
-	box-shadow:6px 5px 0 5px var(--bg);
+	border-bottom-right-radius:0px;
 	transform:scale(0);
 	transform-origin:bottom right;
 	transition:.5s;
@@ -120,7 +119,7 @@ navigation ul li a .icon::after{
 .navigation ul li a .text{
 	position:relative;
 	padding:0 15px;
-	color:#333;
+	color:#ffaaff;
 	display:flex;
 	align-items:center;
 	height:60px;
