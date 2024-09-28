@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<style>
+		  
+		  canvas {
+		    display: block;
+		  }
+		  </style>
 		<meta charset="utf-8" />
 		<title>这里是Anan~ ^O^</title>
 		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/c/font_4691523_d577x64q4xq.css">
@@ -9,6 +15,24 @@
 		<link rel="stylesheet" href="./Toggle.css"> 
 		<link rel="stylesheet" href="./Toggleup.css"> 
 		<link rel="stylesheet" href="./backgrounds.css">
+		<script>
+		function displayTime() {//time function
+		  var now = new Date();
+		  var hours = now.getHours().toString().padStart(2, '0');
+		  var minutes = now.getMinutes().toString().padStart(2, '0');
+		  var seconds = now.getSeconds().toString().padStart(2, '0');
+		  document.getElementById('time').textContent = hours + ':' + minutes + ':' + seconds;
+		}
+		window.onload = function() {
+		  // Update the time every second
+		  setInterval(displayTime, 1000);
+		};
+		</script>
+		<style>
+		.right-align {
+		  text-align: right;
+		}
+		</style>
 	</head>
 	<body>
 		<div class="navigation">
@@ -62,11 +86,13 @@
 		    <div class="sidebar"></div>  
 		    <div class="content">  
 		        <!-- 主页内容 -->  
+	
 		        <h1 style="line-height: 1.5; color:mediumpurple">安安的个人网站</h1>
 				<p style="line-height: 1.5; color:aqua">------------------------------------------------------------------------------------------------------------------------</p>
 				  <br>
 				  <p style="line-height: 1.5;">欢迎宝宝访问，Welcome~</p>
-				  
+				  <h4 style="color:violet" class="right-align">现在的时间是</h4>
+				  <div id="time" style="color:blueviolet" class="right-align"></div>
 		    </div>  
 		</div> 
 	</body>
