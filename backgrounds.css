@@ -1,0 +1,45 @@
+body, html {  
+    height: 100%;  
+    margin: 0;  
+    padding: 0;  
+    /* 假设这是你的背景图片 */  
+    background-image: url('./background.jpg');  
+    background-size: cover;  
+    background-position: center;  
+    display: flex;  
+    justify-content: center; /* 水平居中，但注意这可能会影响到整个页面的布局 */  
+    align-items: flex-start; /* 如果你想让内容从页面顶部开始 */  
+}  
+  
+.container {  
+    /* 这里通常不需要特别的样式，除非你想对.content进行额外的定位或布局控制 */  
+    /* 但如果你想要.container有特定的宽度和居中显示，可以添加以下样式 */  
+    width: 100%; /* 或者一个固定的宽度，比如80% */  
+    max-width: 10000px; /* 可选，限制最大宽度 */  
+    margin: 0 auto; /* 水平居中 */  
+    /* 如果需要垂直居中（且.container不是flex容器），则需要额外的CSS */  
+}  
+  
+.content {  
+    /* 固定宽度 */  
+	background-color: transparent;
+	background-image: none;
+    width: 1000px; /* 你可以根据需要调整这个宽度 */  
+    /* 圆角矩形 */  
+    border-radius: 10px; /* 圆角大小，根据需要调整 */  
+    /* 透明背景，但通常你会想要一点背景色来确保文字可读性，即使是半透明的 */  
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明白色，或者完全透明 rgba(255, 255, 255, 0) */  
+    /* 内边距，留出空位 */  
+    padding: 30px; /* 上下左右都是20px */  
+    /* 你可以添加margin来控制.content与.container之间的空间 */  
+	
+}  
+  .parent-element {  
+      background-color: #f0f0f0; /* 或其他颜色，但确保没有背景图片 */  
+      /* 其他样式 */  
+  }
+/* 注意：在这个例子中，.content的透明背景允许背景图片透过它显示出来（如果设置了透明度的话）。  
+   但是，由于.content有自己的背景色（即使是半透明的），它实际上会覆盖掉背景图片在其下方的部分。  
+   如果你想要.content完全不遮挡背景图片，你可以将.content的背景色设置为完全透明（rgba(255, 255, 255, 0)），  
+   并确保.content的边框（如果有的话）和阴影（如果有的话）也不会遮挡背景图片。  
+*/
