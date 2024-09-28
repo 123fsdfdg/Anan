@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		  
+		  canvas {
+		    display: block;
+		  }
+		  </style>
+		<meta charset="utf-8" />
+		<title>文案区^v^</title>
+		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/c/font_4691523_d577x64q4xq.css">
+		<link rel="stylesheet" href="./general.css"> 
+		<link rel="stylesheet" href="./navigation.css"> 
+		<link rel="stylesheet" href="./Toggle.css"> 
+		<link rel="stylesheet" href="./Toggleup.css"> 
+		<link rel="stylesheet" href="./backgrounds.css">
+		<script>
+		function displayTime() {//time function
+		  var now = new Date();
+		  var hours = now.getHours().toString().padStart(2, '0');
+		  var minutes = now.getMinutes().toString().padStart(2, '0');
+		  var seconds = now.getSeconds().toString().padStart(2, '0');
+		  document.getElementById('time').textContent = hours + ':' + minutes + ':' + seconds;
+		}
+		window.onload = function() {
+		  // Update the time every second
+		  setInterval(displayTime, 1000);
+		};
+		</script>
+		<style>
+		.right-align {
+		  text-align: right;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="navigation">
+			<div class="menuToggle"></div>
+			<ul>
+				<li class="list">
+					<a href="index.html" style="--clr:#f4866a;">
+						<span class="icon">
+							<i><img src="./打招呼.png" width="30" alt="首页" /></i>
+						</span>
+						<span class="text">首页</span>
+					</a>
+				</li>
+				<li class="list">
+					<a href="tools.html" style="--clr:#ffa117;">
+						<span class="icon">
+							<i><img src="./公告.png" width="30" alt="小工具" /></i>
+						</span>
+						<span class="text">小工具</span>
+					</a>
+				</li>
+				<li class="list">
+					<a href="code.html" style="--clr:#0fc70f;">
+						<span class="icon">
+							<i><img src="./关注.png" width="30" alt="模板代码" /></i>
+						</span>
+						<span class="text">模板代码</span>
+					</a>
+				</li>
+				<li class="list">
+					<a href="ilovelinanyu.html" style="--clr:#2196f3;">
+						<span class="icon">
+							<i><img src="./喜欢.png" width="30" alt="关于哥哥" /></i>
+						</span>
+						<span class="text">关于哥哥</span>
+					</a>
+				</li>
+				<li class="list active">
+					<a href="passage.html" style="--clr:#b145e9;">
+						<span class="icon">
+							<i><img src="./礼物.png" width="30" alt="文案" /></i>
+						</span>
+						<span class="text">文案</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<script src="./active.js"></script>
+		<script src="./changeactive.js"></script>
+		<div class="container">
+		    <div class="sidebar"></div>  
+		    <div class="content">  
+		        <!-- 主页内容 -->  
+	
+		        
+		    </div>  
+		</div> 
+	</body>
+</html>
+<!--首页 小工具 模板代码 关于哥哥 友情界面-->
