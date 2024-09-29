@@ -27,6 +27,8 @@ me.png 头像
 
 tools.html 静态网页
 
+toolbox.css 工具栏专用文本框
+
 ### 源代码
 
 code.html 静态网页
@@ -84,3 +86,5 @@ Toggieup.css 导航栏顶端
   2024.9.29
   
   完成主页搭建
+
+  完成工具页面搭建
