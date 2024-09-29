@@ -19,6 +19,10 @@ anan.jpg LOGO
 
 picture.png 安安图片
 
+box.css 个人信息文本框
+
+me.png 头像
+
 ### 小工具
 
 tools.html 静态网页
@@ -76,3 +80,7 @@ Toggieup.css 导航栏顶端
   完成基本框架的搭建。
   
   完成主页大体制作。
+
+  2024.9.29
+  
+  完成主页搭建
