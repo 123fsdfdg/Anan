@@ -1,0 +1,25 @@
+.shadow-text-box {  
+    width: 800px; /* 文本框宽度 */  
+    padding: 10px; /* 内边距 */  
+    font-size: 16px; /* 字体大小 */  
+    border: 1px solid #FFFFFF; /* 边框颜色 */  
+    border-radius: 5px; /* 边框圆角 */  
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5); /* 白色阴影 */  
+    resize: none; /* 禁止调整大小 */  
+    outline: none; /* 去除聚焦时的默认轮廓 */  
+}  
+  
+.shadow-text-box:focus {  
+    /* 聚焦时的样式，可以根据需要调整 */  
+    border-color: #00FF00;  
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.5); /* 聚焦时可能希望改变阴影颜色 */  
+}
+
+.shadow-text-box, .toolright {  
+    display: inline-block; /* 或 block，但可能需要额外的布局技巧来并排显示 */  
+    vertical-align: top; /* 如果需要垂直对齐顶部 */  
+}  
+  
+.toolright {  
+    margin-left: 40px; /* 与文本框保持一定的间距 */  
+}
