@@ -1,0 +1,29 @@
+.text-box {  
+    /* 设置文本框的宽度 */  
+    width: 400px;  
+    /* 设置背景颜色为白色 */  
+    background-color: white;  
+    /* 设置边框为不透明，这里假设你想要边框（如果不需要边框，可以设置为border: none;） */  
+    border: 1px; /* 黑色边框，可以根据需要更改颜色或移除 */  
+    /* 设置边框圆角 */  
+    border-radius: 10px; /* 圆角大小可以根据需要调整 */  
+    /* 设置文本对齐方式 */  
+    text-align: center;  
+    /* 设置内边距，使文本不会紧贴边框 */  
+    padding: 20px;  
+    /* 如果需要的话，还可以设置文本框的外边距 */  
+    margin: 20px; /* 上下外边距为20px，左右自动居中 */  
+    /* 其他样式，如字体样式等 */  
+    font-family: Arial, sans-serif;  
+    color: #333; /* 文本颜色 */ 
+	 box-shadow: 0 4px 8px rgba(0,0,0,0.1);  
+}
+
+.text-box, .right {  
+    display: inline-block; /* 或 block，但可能需要额外的布局技巧来并排显示 */  
+    vertical-align: top; /* 如果需要垂直对齐顶部 */  
+}  
+  
+.right {  
+    margin-left: 100px; /* 与文本框保持一定的间距 */  
+}
