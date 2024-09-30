@@ -1,0 +1,18 @@
+.shadow-box {  
+    width: 950px; /* 文本框宽度 */  
+    padding: 10px; /* 内边距 */  
+    font-size: 16px; /* 字体大小 */  
+    border: 1px solid #FFFFFF; /* 边框颜色 */  
+    border-radius: 5px; /* 边框圆角 */  
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5); /* 白色阴影 */  
+    resize: none; /* 禁止调整大小 */  
+    outline: none; /* 去除聚焦时的默认轮廓 */  
+	position: relative; /* 或 absolute/fixed，取决于你的布局需求 */  
+	left: 0px; /* 右移50像素 */  
+}  
+  
+.shadow-box:focus {  
+    /* 聚焦时的样式，可以根据需要调整 */  
+    border-color: #00FF00;  
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.5); /* 聚焦时可能希望改变阴影颜色 */  
+}
