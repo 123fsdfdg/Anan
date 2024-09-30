@@ -1,33 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<style>
-		  
-		  canvas {
-		    display: block;
-		  }
-		  </style>
-		<meta charset="utf-8" />
+		<style>  
+		.download-btn {  
+		    display: inline-block;    
+		    color: mediumpurple;  
+			background-color: #d4e5ef;
+		    text-decoration: none;  
+		    border-radius: 5px;  
+		}  
+		 
+		.download-btn:hover {  
+		    background-color: #98b6c2;  
+		}  
+		</style>  
 		<title>开源在这里！</title>
-		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/c/font_4691523_d577x64q4xq.css">
 		<link rel="stylesheet" href="./general.css"> 
 		<link rel="stylesheet" href="./navigation.css"> 
 		<link rel="stylesheet" href="./Toggle.css"> 
 		<link rel="stylesheet" href="./Toggleup.css"> 
 		<link rel="stylesheet" href="./backgrounds.css">
-		<script>
-		function displayTime() {//time function
-		  var now = new Date();
-		  var hours = now.getHours().toString().padStart(2, '0');
-		  var minutes = now.getMinutes().toString().padStart(2, '0');
-		  var seconds = now.getSeconds().toString().padStart(2, '0');
-		  document.getElementById('time').textContent = hours + ':' + minutes + ':' + seconds;
-		}
-		window.onload = function() {
-		  // Update the time every second
-		  setInterval(displayTime, 1000);
-		};
-		</script>
+		<link rel="stylesheet" href="./toolbox.css">
 		<style>
 		.right-align {
 		  text-align: right;
@@ -86,10 +79,40 @@
 		    <div class="sidebar"></div>  
 		    <div class="content">  
 		        <!-- 主页内容 -->  
-	
-		        
+		    <h1 style="color: darkviolet">开源代码</h1>
+		    <p style="line-height: 1.5; color:aqua">------------------------------------------------------------------------------------------------------------------------</p>
+		    <br>
+		    <h4 style="color:darkorange">源码在这里哦宝宝,咱们下载的文件大概率会放进/download里面的~</h4>
+		    <br><br><br>
+			<div class="shadow-text-box">
+				<h2 style="color:#b05923 ">快读模板(C++)</h2><br>
+				<p style="color: #4c0009">功能介绍：这个模板力推！！目前为止是OI主流！目前是我见到的最快速的读写！</p>
+				<p style="color :#008c8c">祝宝宝永不卡常~  AK IOI~</p>
+				<h4 style="color: red">提醒————请确保宝宝的本地IDE支持中文！！不然会乱码的！</h4>
+			</div>
+			<div class="toolright">
+				<br><br>
+				<h4 style="color: violet" align="center">时间复杂度</h4>
+				<h3 style="color: #4c0009" align="center">O(1)</h3>
+			</div>
+			<br><br>
+			<a href="./fastread.cpp" download="fastread.cpp" class="download-btn" id="downloadLink">快读模板下载点我~</a>  
+			<br><br><br>
+			<div class="shadow-text-box">
+				<h2 style="color:#b05923 ">一元线性回归模型及样本相关系数(C++)</h2><br>
+				<p style="color: #2e59a7">功能介绍：用来计算线性回归方程以及样本相关系数。（高中·统计与概率公式）</p>
+				<h4 style="color: red">提醒————请确保宝宝的本地IDE支持中文！！不然会乱码的！</h4>
+			</div>
+			<div class="toolright">
+				<br><br>
+				<h4 style="color: violet" align="center">时间复杂度</h4>
+				<h3 style="color: #4c0009" align="center">O(n)</h3>
 		    </div>  
+			<br><br>
+			<a href="./model.cpp" download="model.cpp" class="download-btn" id="downloadLink">线性回归下载点我~</a>  
+			<br><br><br>
+			<p style="color: gray" align="center">宝宝~更多源码还在开发哦，有想要的功能可以小红书或邮箱找我呢。</p>
+			</div>
 		</div> 
 	</body>
 </html>
-<!--首页 小工具 模板代码 关于哥哥 友情界面-->
