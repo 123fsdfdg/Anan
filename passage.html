@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<style>
-		  
-		  canvas {
-		    display: block;
-		  }
-		  </style>
+		<style>  
+		        table {  
+		            border-collapse: collapse;  
+		        }  
+		        td {  
+		            vertical-align: top; /* 确保图片和文字顶部对齐 */  
+		        }  
+				
+				.rounded-image{
+					 border-radius: 15px;
+				}
+				td.text-cell {  
+				    padding-left: 20px; /* 根据需要调整这个值 */  
+				}
+		    </style> 
 		<meta charset="utf-8" />
 		<title>文案区^v^</title>
 		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/c/font_4691523_d577x64q4xq.css">
@@ -15,6 +24,7 @@
 		<link rel="stylesheet" href="./Toggle.css"> 
 		<link rel="stylesheet" href="./Toggleup.css"> 
 		<link rel="stylesheet" href="./backgrounds.css">
+		<link rel="stylesheet" href="./passagebox.css">
 		<script>
 		function displayTime() {//time function
 		  var now = new Date();
@@ -28,11 +38,6 @@
 		  setInterval(displayTime, 1000);
 		};
 		</script>
-		<style>
-		.right-align {
-		  text-align: right;
-		}
-		</style>
 	</head>
 	<body>
 		<div class="navigation">
@@ -86,8 +91,81 @@
 		    <div class="sidebar"></div>  
 		    <div class="content">  
 		        <!-- 主页内容 -->  
-	
-		        
+				<h1 style="line-height: 1.5; color:mediumpurple">文案及小说</h1>
+				<p style="line-height: 1.5; color:aqua">------------------------------------------------------------------------------------------------------------------------</p>
+				<br>
+				<h4 style="color: royalblue">这里是展示的小说与文案！喜欢文字的宝宝有福了。</h4>
+				<br><br><br>
+				<div class="shadow-box">
+					<table>  
+					        <tr>  
+					            <td><img src="./novel1.png" class="rounded-image" style="width: 150px; height: auto;"></td>  
+					            <td class="text-cell">  
+					                <h2 style="color:#8a1874" font="华文彩云" align="center">(小说)暗夜剧院</h2><br>
+									<h4 style="color: #757cbb" align="center">作者：安安Violet</h4><br>
+									<h4 style="color: #151d29">#规则类怪谈 #慢节奏 #言情向</h4>
+									<p style="color: #98b6c2">    主角林安安（我）与林安渝（哥哥）再一次被怪谈卷入了一座被侵蚀的城市，只有肃清这里的怪谈才能够离开。经探查，这里荒废已久的暗夜剧院却隐藏着两派强大的怪谈力量。也许只有厘清两股势力的关系，才能够辨清回家的方向吧……</p>
+									<br><button onclick="document.getElementById('linkToPage').click()" align="center">点我~邂逅文字</button>  
+									<a id="linkToPage" href="./novel1.html" target="_blank" style="display:none;" align="center"></a>  
+								</td>  
+					        </tr>  
+					    </table>  
+					
+					<!--这里写文本栏里面的-->
+				</div><br><br><br>
+				<div class="shadow-box">
+					<table>  
+					        <tr>  
+					            <td><img src="./novel2.jpg" class="rounded-image" style="width: 150px; height: auto;"></td>  
+					            <td class="text-cell">  
+					                <h2 style="color:#8a1874" font="华文彩云" align="center">(小说)无尽回廊</h2><br>
+									<h4 style="color: #757cbb" align="center">作者：安安Violet</h4><br>
+									<h4 style="color: #151d29">#规则类怪谈 #慢节奏 #言情向</h4>
+									<p style="color: #98b6c2">    菲尼克斯对力量的贪欲，将林安安（我）和林安渝（哥哥）卷入了“无尽回廊”的国度，试图用规则抽离我们的力量。不死鸟的飞羽遮蔽天地，我们必须寻找到其最薄弱的地方，直面他的内心，或许才能够离开这里。</p>
+									<br><button onclick="document.getElementById('linkToPage').click()" align="center">点我~邂逅文字</button>  
+									<a id="linkToPage" href="./novel2.html" target="_blank" style="display:none;" align="center"></a>  
+								</td>  
+					        </tr>  
+					    </table>  
+					
+					<!--这里写文本栏里面的-->
+				</div><br><br><br>
+				<div class="shadow-box">
+					<table>  
+					        <tr>  
+					            <td><img src="./novel3.jpg" class="rounded-image" style="width: 150px; height: auto;"></td>  
+					            <td class="text-cell">  
+					                <h2 style="color:#8a1874" font="华文彩云" align="center">(小说)极光</h2><br>
+									<h4 style="color: #757cbb" align="center">作者：安安Violet</h4><br>
+									<h4 style="color: #151d29">#规则类怪谈 #慢节奏 #言情向</h4>
+									<p style="color: #98b6c2">    绚丽的极光常年笼罩在极光城的上空。即使这里是一个怪谈的城市，「极光之灵」却并没有伤害大家的意思……可叹软弱终将成为利剑，人造怪谈的成功，让那些人对权力的欲望达到了顶峰。如果兄妹（我、哥哥）不能及时阻止的话，也许就要永远笼罩在极光之下了……</p>
+									<br><button onclick="document.getElementById('linkToPage').click()" align="center">点我~邂逅文字</button>  
+									<a id="linkToPage" href="./novel3.html" target="_blank" style="display:none;" align="center"></a>  
+								</td>  
+					        </tr>  
+					    </table>  
+					
+					<!--这里写文本栏里面的-->
+				</div><br><br><br>
+				<div class="shadow-box">
+					<table>  
+					        <tr>  
+					            <td><img src="./novel4.jpg" class="rounded-image" style="width: 150px; height: auto;"></td>  
+					            <td class="text-cell">  
+					                <h2 style="color:#8a1874" font="华文彩云" align="center">(小说)月魂</h2><br>
+									<h4 style="color: #757cbb" align="center">作者：安安Violet</h4><br>
+									<h4 style="color: #151d29">#规则类怪谈 #慢节奏 #言情向</h4>
+									<p style="color: #98b6c2">    林安渝（哥哥）与林安安（我）再度进入了一个女孩悲惨的经历当中。她对「爱」的执念，超乎了一切，为此所困，她害怕未知的事物，因执念而化作怪谈，便不断地斩断一切可称得上「爱」的事物。</p>
+									<br><button onclick="document.getElementById('linkToPage').click()" align="center">点我~邂逅文字</button>  
+									<a id="linkToPage" href="./novel4.html" target="_blank" style="display:none;" align="center"></a>  
+								</td>  
+					        </tr>  
+					    </table>  
+					
+					<!--这里写文本栏里面的-->
+				</div>
+				<br><br><br>
+			<p style="color: gray" align="center">宝宝想要投稿的话~看主页邮箱或者小红书哦~</p>
 		    </div>  
 		</div> 
 	</body>
