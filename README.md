@@ -27,11 +27,15 @@ me.png 头像
 
 tools.html 静态网页
 
-toolbox.css 工具栏专用文本框
+toolbox.css 工具栏、源代码专用文本框
 
 ### 源代码
 
 code.html 静态网页
+
+fastread.cpp 快读模板文件下载
+
+model.cpp 线性回归文件下载
 
 ### 哥哥区
 
@@ -92,3 +96,5 @@ Toggieup.css 导航栏顶端
   20224.9.30
   
   完善工具页面
+  
+  完成代码页面
