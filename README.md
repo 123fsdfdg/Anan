@@ -49,6 +49,12 @@ ilovelinanyu.html 静态网页
 
 passage.html 静态网页
 
+novel系列文件名 小说
+
+passagebox.css 文案专用栏
+
+novelbox.css 小说专用栏
+
 ### 导航栏
 
 active.js 控制动画
@@ -102,3 +108,5 @@ Toggieup.css 导航栏顶端
   完善工具页面
   
   完成代码页面
+
+  完成小说页面
