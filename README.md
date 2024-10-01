@@ -23,6 +23,8 @@ box.css 个人信息文本框
 
 me.png 头像
 
+sakura.js 樱花特效
+
 ### 小工具
 
 tools.html 静态网页
@@ -124,3 +126,5 @@ Toggieup.css 导航栏顶端
   完成哥哥页面 添加一些其余优化
   
   网站正式上线-version 1.0.0
+  
+  优化特效
