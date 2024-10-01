@@ -40,7 +40,7 @@
 .extra-content {  
     position: absolute;  
     top: 50px; /* 根据需要调整 */  
-    left: 500px; /* 立方体宽度（200px）+ 间距（50px）+ 额外间距（根据需要） */  
+    left: 480px; /* 立方体宽度（200px）+ 间距（50px）+ 额外间距（根据需要） */  
     width: 200px; /* 或你想要的宽度 */  
     height: auto; /* 或你想要的高度 */  
     background-color: transparent; /* 或你想要的背景色 */  
