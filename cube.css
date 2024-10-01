@@ -1,0 +1,58 @@
+ 
+
+
+  
+.cube-container {  
+    width: 200px;  
+    height: 200px;  
+    position: relative;  
+    transform-style: preserve-3d;  
+    transform: rotateX(-30deg) rotateY(-45deg);  
+    transition: transform 1s; /* 添加过渡效果 */  
+	margin: 50px;
+}  
+  
+.cube-face {  
+    position: absolute;  
+    width: 200px;  
+    height: 200px;  
+    background-color: rgba(255, 255, 255, 0.9);  
+    border: 1px solid #ccc;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+}  
+  
+.front  { transform: translateZ(100px); }  
+.back   { transform: rotateY(180deg) translateZ(100px); }  
+.right  { transform: rotateY(90deg) translateZ(100px); }  
+.left   { transform: rotateY(-90deg) translateZ(100px); }  
+.top    { transform: rotateX(90deg) translateZ(100px); }  
+.bottom { transform: rotateX(-90deg) translateZ(100px); }  
+  
+#rotateButton {  
+    margin-top: 20px;  
+    padding: 10px 20px;  
+    font-size: 16px;  
+    cursor: pointer;  
+}
+
+.extra-content {  
+    position: absolute;  
+    top: 50px; /* 根据需要调整 */  
+    left: 500px; /* 立方体宽度（200px）+ 间距（50px）+ 额外间距（根据需要） */  
+    width: 200px; /* 或你想要的宽度 */  
+    height: auto; /* 或你想要的高度 */  
+    background-color: transparent; /* 或你想要的背景色 */  
+    padding: 20px;  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 可选，增加阴影效果 */  
+}
+
+.extra-contenta {  
+    position: absolute;  
+    top: 50px; /* 根据需要调整 */  
+    left: 700px; /* 立方体宽度（200px）+ 间距（50px）+ 额外间距（根据需要） */  
+    background-color: transparent; /* 或你想要的背景色 */  
+	width: 425px;
+	margin: 15px;
+}
