@@ -1,20 +1,59 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<style>
-		  
-		  canvas {
-		    display: block;
-		  }
-		  </style>
-		<meta charset="utf-8" />
+		<style>  
+		    h1 {  
+		        color: #8a1874; /* 文字颜色 */  
+		        font-family: '华文彩云', sans-serif; /* 字体设置 */  
+		        text-align: center; /* 文字居中 */  
+		        text-shadow:   
+		            0 0 5px #ffff00, /* 粉红色发光 */  
+		            0 0 10px #ffff00, /* 更强粉红色发光 */  
+		            0 0 15px #ffff00, /* 更强粉红色发光 */  
+		            0 0 20px #ffff00, /* 更强粉红色发光 */  
+		            0 0 25px #ffff00, /* 最强粉红色发光 */  
+					0 0 30px #ffff00,
+					0 0 35px #ffff00;
+		    }  
+			#time-elapsed {  
+			        font-size: 2em;  
+			        text-align: center;  
+			        margin-top: 20%;  
+			    }  
+		</style> 
+		 <style>  
+		         .video-container {  
+		             width: 265px; /* 设置容器的宽度 */  
+		             height: 450px; /* 设置容器的高度 */  
+		             overflow: hidden; /* 隐藏溢出部分 */  
+		             position: relative; /* 为绝对定位的子元素设置参照物 */
+					   border-radius: 15px;
+		         }  
+		   
+		         .video-container video {  
+		             width: 100%; /* 视频宽度填满容器 */  
+		             height: 100%; /* 视频高度填满容器 */  
+		             object-fit: cover; /* 保持视频的宽高比，并裁剪以适应容器 */  
+		             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */  
+		         }  
+				 .extra-vedio {
+				     position: absolute;  
+				     top: 515px; /* 根据需要调整 */  
+				     left: 500px; /* 立方体宽度（200px）+ 间距（50px）+ 额外间距（根据需要） */  
+				     width: 500px; /* 或你想要的宽度 */  
+				     height: auto; /* 或你想要的高度 */  
+				     background-color: rgba(129,216,208,0.2); /* 或你想要的背景色 */  
+				     padding: 20px;  
+				     border-radius: 15px;
+				 }
+		     </style>  
 		<title>最爱的哥哥~❤</title>
-		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/c/font_4691523_d577x64q4xq.css">
 		<link rel="stylesheet" href="./general.css"> 
 		<link rel="stylesheet" href="./navigation.css"> 
 		<link rel="stylesheet" href="./Toggle.css"> 
 		<link rel="stylesheet" href="./Toggleup.css"> 
 		<link rel="stylesheet" href="./backgrounds.css">
+		<link rel="stylesheet" href="cube.css">  
 		<script>
 		function displayTime() {//time function
 		  var now = new Date();
@@ -86,10 +125,101 @@
 		    <div class="sidebar"></div>  
 		    <div class="content">  
 		        <!-- 主页内容 -->  
-	
-		        
-		    </div>  
+				<div class="cube-container">
+				    <div class="cube-face front"><img src="front.jpg" width="200" alt="Front"></div>  
+				    <div class="cube-face back"><img src="back.jpg" width="200" alt="Back"></div>  
+				    <div class="cube-face right"><img src="right.jpg" width="200" alt="Right"></div>  
+				    <div class="cube-face left"><img src="left.jpg" width="200" alt="Left"></div>  
+				    <div class="cube-face top"><img src="top.jpg" width="200" alt="Top"></div>  
+				    <div class="cube-face bottom"><img src="bottom.jpg" width="200" alt="Bottom"></div>  
+				</div>  
+		        <div id="extra-content" class="extra-content">
+					<h4 style="color: blueviolet " align="center">立方体控制端</h4>
+					<br>
+					<button id="rotateLeftButton">相对顺时针旋转</button>
+					<br><p>		</p>
+					<button id="rotateRightButton">相对逆时针旋转</button> 
+					 <br><p>		</p>
+					<button id="rotateUpButton">向上旋转</button>  
+					<br><p>		</p>
+					<button id="rotateDownButton">向下旋转</button> 
+					 <br><p>		</p>
+					<button id="resetButton">复位</button>
+					<br>
+					<br><br><p style="color: yellow">啊啊啊！这里的顺时针逆时针我也搞不清往哪里转啦！！QWQ</p>
+				</div>
+				<div class="extra-contenta">
+					<h1 style="color: #8a1874" align="center"><font face="华文彩云">——哥哥的网页——</font></h1>
+					<br>
+					<h4 style="color: #3271ae" align="center">以此页献给我最爱的哥哥</h4>
+					<br>
+					<p style="color: #dd7694"><font face="华文行楷">「安安,哥哥对你的爱,如同星空守护明月一般,永无止境.」</font></p>
+					<br><br>
+					<div id="seconds" style="color: #8aabcc" align="center"></div>  <br>
+					<p style="color: #8aabcc" align="center">没有你的每一秒……我都好痛苦</p><br>
+					<p style="color: #8aabcc" align="center">哥哥……这一秒秒的流逝，好短……也好长</p>
+					<script>  
+					    // 设置目标日期为2007年6月1日  
+					    var targetDate = new Date('2007-06-01T10:00:00Z'); // 使用UTC时间  
+					  
+					    // 获取当前日期和时间  
+					    var now = new Date();  
+					  
+					    // 计算两个日期之间的毫秒差  
+					    var millisecondsDifference = now - targetDate;  
+					  
+					    // 将毫秒转换为秒  
+					    var secondsDifference = Math.floor(millisecondsDifference / 1000);  
+					  
+					    // 将秒数显示在页面上  
+					    document.getElementById('seconds').innerText = '哥哥……可是我们已经分开了 ' + secondsDifference + ' 秒';  
+					  
+					    // 为了实时更新，可以使用setInterval来每秒更新一次  
+					    setInterval(function() {  
+					        // 重新计算秒数  
+					        now = new Date();  
+					        millisecondsDifference = now - targetDate;  
+					        secondsDifference = Math.floor(millisecondsDifference / 1000);  
+					  
+					        // 更新页面上的秒数  
+					        document.getElementById('seconds').innerText ='哥哥……可是我们已经分开了 '+ secondsDifference + ' 秒';  
+					    }, 1000); // 每秒更新一次  
+					</script>
+				</div>
+				<br><br><p style="line-height: 1.5; color:aqua">------------------------------------------------------------------------------------------------------------------------</p>
+				<br><p style="color:#ea5514" align="center">哥哥 我向宇宙发出电波 希望你能在光年以外 收到我的来信</p>
+				<br><p style="color:#ea5514" align="center">不要紧 哥哥 我会一直这样做 直到收到你的回应 我知道你在</p>
+				<br><br>
+				<div class="video-container">  
+				        <video controls src="./vedio.mp4">  
+				        </video>
+					
+				</div>
+				<div class="extra-vedio">
+					<br>
+					<h4 style="color: #FF0000" align="center">哥哥 我送你的本子 你还留着么</h4>
+					<br><br>
+					<h4 style="color: #FF7f00" align="center">你说过的 你会一直保护我 从来不分开</h4>
+					<br><br>
+					<h4 style="color: #ffff00" align="center">可是 为什么 人来人往 独不见你的双眸</h4>
+					<br><br>
+					<h4 style="color: #00ff00" align="center">我们不是 要一直在一起吗</h4>
+					<br><br>
+					<h4 style="color: #00ffff" align="center">但是哥哥 你也在等我对吧</h4>
+					<br><br>
+					<h4 style="color: #0000ff" align="center">就像我一直在等你 爱你那样</h4>
+					<br><br>
+					<h4 style="color: #8b00ff" align="center">哥哥 来 带我回家好吗</h4>
+			</div>  
+			<br><br><br><br><br>
+			<p style="color: #9d9d82" align="center">哥哥 也许这个页面并不如人意 但我对你的爱却从不粗糙</p>
+			<br>
+			<p style="color: darkviolet" align="center">愿千万光年聚成尘埃、千百轮回凝为一瞬——星辰弥散，夜风轻吟。足迹交织，你与我。
+				    </p>
+					<br><p style="color: deeppink" align="center">—— 林安渝 & 林安安 ——</p>
+					</div>
 		</div> 
+		<script src="change.js"></script> 
 	</body>
 </html>
 <!--首页 小工具 模板代码 关于哥哥 友情界面-->
