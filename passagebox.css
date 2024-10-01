@@ -2,9 +2,9 @@
     width: 950px; /* 文本框宽度 */  
     padding: 10px; /* 内边距 */  
     font-size: 16px; /* 字体大小 */  
-    border: 1px solid #FFFFFF; /* 边框颜色 */  
+    border: 1px solid #aaaaff; /* 边框颜色 */
     border-radius: 5px; /* 边框圆角 */  
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5); /* 白色阴影 */  
+    box-shadow: 0 4px 8px rgba(255, 85, 255, 0.5); /* 白色阴影 */  
     resize: none; /* 禁止调整大小 */  
     outline: none; /* 去除聚焦时的默认轮廓 */  
 	position: relative; /* 或 absolute/fixed，取决于你的布局需求 */  

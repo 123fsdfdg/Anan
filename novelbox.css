@@ -18,7 +18,7 @@ body, html {
     width: 100%; /* 或者一个固定的宽度，比如80% */  
     max-width: 10000px; /* 可选，限制最大宽度 */  
     margin: 0 auto; /* 水平居中 */  
-	box-shadow: 0 4px 8px rgba(255, 255, 255, 0.7);
+	box-shadow: 0 4px 8px rgba(255, 170, 255, 0.7);
     /* 如果需要垂直居中（且.container不是flex容器），则需要额外的CSS */  
 }  
   
