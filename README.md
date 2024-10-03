@@ -25,6 +25,10 @@ me.png 头像
 
 sakura.js 樱花特效
 
+renz.png 图标
+
+award.png 图标
+
 ### 小工具
 
 tools.html 静态网页
@@ -128,3 +132,7 @@ Toggieup.css 导航栏顶端
   网站正式上线-version 1.0.0
   
   优化特效
+
+  2024.10.3
+
+  优化主页
