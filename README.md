@@ -47,6 +47,8 @@ ldq.cpp 连点器文件下载
 
 sd.cpp 解数独文件下载
 
+ksm.cpp 快速幂文件下载
+
 ### 哥哥区
 
 ilovelinanyu.html 静态网页
